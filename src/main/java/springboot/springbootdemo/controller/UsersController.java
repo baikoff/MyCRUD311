@@ -28,7 +28,7 @@ public class UsersController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("redirectAll") User user) {
+    public String create(@ModelAttribute("user") User user) {
         userService.saveUser(user);
         return "redirect:/users";
     }
@@ -40,7 +40,7 @@ public class UsersController {
     }
 
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("redirectAll") User user, @PathVariable("id") int id) {
+    public String update(@ModelAttribute("user") User user, @PathVariable("id") int id) {
         userService.update(user, id);
         return "redirect:/users";
     }
