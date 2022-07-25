@@ -11,13 +11,4 @@ public interface UserDAO extends JpaRepository<User, Integer> {
 
     void deleteById(Integer id);
 
-//    List<User> getAllUsers();
-//
-//    void save(User user);
-//
-//    User findById(int id);
-//
-//    void update(User user, int id);
-//
-//    void delete(int id);
 }
